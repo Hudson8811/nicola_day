@@ -1,4 +1,10 @@
 header.header
+	.header-mobile
+		.container.header-mobile__container
+			a(href="/").header-mobile__logo
+				img(src="./images/nicola-logo-red.svg", alt="logo")
+			.sh-burger
+				span
 	.header-top
 		.container.header-top__container
 			a(href="/").header-top__logo
@@ -7,7 +13,7 @@ header.header
 				img(src="./images/arrow.svg")
 				span Парк Коломенское
 	.header-bottom
-		.container.header-bottom__container 
+		.header-bottom__container 
 			nav.header-nav 
 				ul.header-nav__list
 					li.header-nav__item 
@@ -29,6 +35,4 @@ header.header
 					li.header-nav__item 
 						a(href="/") пресс-центр
 					li.header-nav__item 
-						a(href="/") пресс-центр
-	.sh-burger
-		span
+						a(href="/") контакты
