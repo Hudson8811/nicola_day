@@ -1,0 +1,93 @@
+.schedule {
+	padding-top: 52px;
+
+	&__block {
+		padding-top: 19px;
+
+		&--last {
+			padding-bottom: 21px;
+			.schedule-item {
+				&-wrap {
+					border-left: 6px solid $textRed;
+				}
+
+				&-link {
+					font-family: $mainFontBold;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+
+	&__subtitle {
+		margin-top: 26px;
+	}
+
+	&-item {
+		&-wrap {
+			margin-top: 10px;
+			max-width: 270px;
+			border-left: 6px solid $textOrange;
+			padding-left: 15px;
+		}
+
+		&-time {
+			font-family: $mainFontBold;
+			font-size: 14px;
+			line-height: 18px;
+		}
+
+		&-text {
+			font-size: 14px;
+			line-height: 18px;
+		}
+
+		&-link {
+			font-size: 14px;
+			line-height: 18px;
+			color: $textRed;
+		}
+	}
+
+	&__row {
+		&--small {
+			padding-top: 11px;
+		}
+
+		&--line {
+			border-top: 1px solid #c4c4c4;
+			margin-top: 7px;
+			padding-bottom: 5px;
+		}
+
+		&-title {
+			margin-top: 4px;
+			font-family: $mainFontBold;
+			font-size: 14px;
+			line-height: 16px;
+			text-transform: uppercase;
+			color: $textRed;
+		}
+	}
+
+	&__header {
+		display: flex;
+	}
+
+	&__column {
+		flex: 1 0 300px;
+
+		h3 {
+			font-family: $mainFontBold;
+			font-size: 18px;
+			line-height: 21px;
+			margin-top: 14px;
+		}
+
+		.schedule-item-wrap {
+			&:not(:first-child) {
+				margin-top: 18px;
+			}
+		}
+	}
+}

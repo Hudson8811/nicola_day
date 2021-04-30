@@ -12,8 +12,7 @@ html(lang="ru")
 		meta(property="og:image" content="images/logo.svg")
 		meta(name="format-detection" content="telephone=no")
 		link(href="css/main.css" rel="stylesheet")
-
-		//title= `${page.title}`
+		title= `${page.title}`
 
 	body
 		block header
@@ -21,9 +20,6 @@ html(lang="ru")
 
 		main.main
 			block main
-
-		block footer
-			include ../partials/_footer
 
 		block modals
 
