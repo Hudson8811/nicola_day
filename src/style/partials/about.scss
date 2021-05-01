@@ -1,0 +1,19 @@
+.about {
+	padding-bottom: 70px;
+	
+	&-content {
+		p {
+			margin-top: 21px;
+			font-size: 18px;
+			line-height: 21px;
+
+			&:first-child {
+				margin-top: 38px;
+			}
+		}
+
+		img {
+			margin-top: 43px;
+		}
+	}
+}
