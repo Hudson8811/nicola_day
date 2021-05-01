@@ -3,6 +3,7 @@
 //= libs/jquery-3.3.1.min.js
 //= libs/jquery.fancybox.min.js
 //= libs/slick.min.js
+//= libs/masonry.min.js
 
 /* my scripts */
 

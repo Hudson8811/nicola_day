@@ -9,7 +9,16 @@ $(document).ready(function () {
 
       videoWrapper.append(script);
       videoWrapper.addClass('active');
-
    });
+
+   if ($('.press__block')) {
+      $('.press__block').masonry({
+         itemSelector: '.press-item',
+         columnWidth: 370,
+         gutter: '.press-sizer',
+       });
+   }
+
+
 });
 

@@ -55,3 +55,34 @@ mixin infoItem($title="", $text="", $span="", $border="", $href="/")
 					=$text
 			a.info-item-link(href=$href)
 				img(src="images/arrow-red.svg", alt="-->")
+mixin pressItem($class="", $date="", $title="", $text="", $img="", $alt="")
+	if($img!="")
+		div(class=$class)
+			p.press-item__date
+				=$date
+			.press-item__content 
+				img(src=$img, alt=$alt)
+				h2.press-item__title 
+					=$title
+				p.press-item__text 
+					=$text
+				a.press-item__link(href="/") читать новость >
+	else 
+		if($title!="")
+			div(class=$class)
+				p.press-item__date
+					=$date
+				.press-item__content
+					h2.press-item__title 
+						=$title
+					p.press-item__text 
+						=$text
+					a.press-item__link(href="/") читать новость >
+		else
+			div(class=$class)
+				p.press-item__date
+					=$date
+				.press-item__content
+					p.press-item__text 
+						=$text
+					a.press-item__link(href="/") читать новость >

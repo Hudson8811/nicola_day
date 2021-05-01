@@ -1,0 +1,44 @@
+.press {
+	padding-top: 53px;
+
+	&__block {
+		padding-top: 59px;
+	}
+
+	&-item {
+		width: 370px;
+		max-width: 370px;
+		&__date {
+			color: $textOrange;
+		}
+
+		&__content {
+			margin-top: 7px;
+			border-top: 10px solid #fff;
+			border-image: linear-gradient(90.04deg, #FF0023 -1.35%, #F0C314 105.4%) 30;
+		}
+
+		&__title {
+			margin-top: 18px;
+			font-family: $mainFontBold;
+			font-size: 24px;
+			line-height: 28px;
+			text-transform: uppercase;
+			color: $textRed;
+		}
+
+		&__text {
+			margin-top: 14px;
+		}
+
+		&__link {
+			display: block;
+			color: $textRed;
+			margin-top: 16px;
+		}
+	}
+
+	&-sizer {
+		width: 30px;
+	}
+}
