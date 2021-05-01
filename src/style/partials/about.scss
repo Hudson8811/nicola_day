@@ -1,5 +1,19 @@
 .about {
 	padding-bottom: 70px;
+
+	&-header {
+		padding-top: 26px;
+		font-family: $mainFontBold;
+		font-size: 18px;
+		line-height: 24px;
+		text-transform: uppercase;
+		color: $textRed;
+
+		&__link {
+			font-family: $mainFont;
+			text-transform: none;
+		}
+	}
 	
 	&-content {
 		p {
@@ -9,6 +23,14 @@
 
 			&:first-child {
 				margin-top: 38px;
+			}
+		}
+
+		.strong {
+			font-family: $mainFontBold;
+
+			span {
+				white-space: nowrap;
 			}
 		}
 
