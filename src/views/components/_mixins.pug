@@ -36,11 +36,22 @@ mixin scheduleItem($time="", $text="", $linkText="", $href="/")
 		if($linkText!="")
 			a.schedule-item-link(href=$href)
 				=$linkText
-mixin infoItem($title="", $text="", $linkText="", $href="/")
-	.info-item-wrap 
-		.info-item-title
-			=$title
-		.info-item-text
-			=$text
-		a.info-item-link(href=$href)
-			img(src="images/arrow-red.svg", alt="-->")
+mixin infoItem($title="", $text="", $span="", $border="", $href="/")
+	if($border=="")
+		.info-item-wrap.info-item-wrap--gradient
+			.info-item-title
+				=$title
+			.info-item-text
+				=$text
+			a.info-item-link(href=$href)
+				img(src="images/arrow-red.svg", alt="-->")
+	else
+		.info-item-wrap.info-item-wrap--red
+			.info-item-title.info-item-title--black
+				=$title
+			.info-item-text
+				=$span
+				p 
+					=$text
+			a.info-item-link(href=$href)
+				img(src="images/arrow-red.svg", alt="-->")
