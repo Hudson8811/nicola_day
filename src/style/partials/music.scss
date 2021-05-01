@@ -1,0 +1,29 @@
+.music {
+	padding-top: 65px;
+	padding-bottom: 70px;
+
+	&__row {
+		padding-top: 22px;
+		flex-wrap: wrap;
+
+		@media (max-width: 628px) {
+			justify-content: center;
+		}
+	}
+
+	&__title {
+		line-height: 60px;
+
+		@media (max-width: 628px) {
+			text-align: center;
+		}
+	}
+
+	&__subtitle {
+		margin-top: 32px;
+
+		@media (max-width: 628px) {
+			text-align: center;
+		}
+	}
+}

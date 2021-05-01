@@ -90,7 +90,7 @@ gulp.task('style:build', function () {
 		.pipe(sass())
 		//.pipe(gcmq())
 		.pipe(autoprefixer({
-			browsers: ['last 2 versions']
+			overrideBrowserslist: ['last 2 versions']
 		}))
 		.pipe(cleanCSS({rebase: false}))
 		.pipe(sourcemaps.write('./maps'))
