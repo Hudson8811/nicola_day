@@ -16,6 +16,7 @@ $(document).ready(function () {
          itemSelector: '.press-item',
          columnWidth: 370,
          gutter: '.press-sizer',
+         horizontalOrder: true
        });
    }
 
