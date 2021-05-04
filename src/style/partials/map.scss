@@ -32,17 +32,27 @@
 		overflow-y: auto;
 		height: 100vh;
 
-		&__link {
-			&:not(:first-child) {
-				margin-top: 12px;
-			}
+		ul {
+			li {
+				button {
+					text-align: left;
+					width: 100%;
+					background: #fff;
+					border: none;
+					display: block;
+					margin-top: 15px;
+					margin-bottom: 0;
+					font-size: 16px;
+					cursor: pointer;
+					line-height: 22px;
+					outline: none;
+					text-decoration: none;
+					color: #000;
 
-			&:hover {
-				text-decoration: underline;
-			}
-
-			&.active {
-				font-family: $mainFontBold;
+					&:hover {
+						font-family: $mainFontBold;
+					}
+				}
 			}
 		}
 	}
