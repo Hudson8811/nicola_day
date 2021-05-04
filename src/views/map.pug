@@ -1,0 +1,17 @@
+extends layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Карта'
+		};
+
+block links
+	<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet'/>
+
+block main
+	include partials/_map
+
+block scripts 
+	script(src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js')
+	script(src="js/map.js")

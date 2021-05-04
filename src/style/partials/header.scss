@@ -89,6 +89,7 @@
       background: linear-gradient(165.26deg, #ff0023 0%, #f0c314 101.09%);
       border-bottom: none;
       transition: 0.3s;
+      z-index: 9999;
     }
 
     &.active {

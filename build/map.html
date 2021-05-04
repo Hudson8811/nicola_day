@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:image" content="images/logo.svg">
+    <meta name="format-detection" content="telephone=no">
+    <link href="css/main.css" rel="stylesheet">
+    <title>Карта</title><link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet'/>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-mobile">
+        <div class="container header-mobile__container"><a class="header-mobile__logo" href="/"><img src="./images/nicola-logo-red.svg" alt="logo"></a>
+          <div class="sh-burger"><span></span></div>
+        </div>
+      </div>
+      <div class="header-top">
+        <div class="container header-top__container"><a class="header-top__logo" href="/"><img src="./images/nicola-logo.svg" alt="logo"></a>
+          <div class="header-top__title">21-23 мая 2021<img src="./images/arrow.svg"><span>Парк Коломенское</span></div>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="header-bottom__container"> 
+          <nav class="header-nav"> 
+            <ul class="header-nav__list">
+              <li class="header-nav__item"> <a href="/">О фестивале</a></li>
+              <li class="header-nav__item header-nav__item--red active"><a href="/">расписание</a></li>
+              <li class="header-nav__item header-nav__item--red"><a href="/">карта</a></li>
+              <li class="header-nav__item"><a href="/">Цирк/кино/спорт</a></li>
+              <li class="header-nav__item"> <a href="/">музыка</a></li>
+              <li class="header-nav__item"> <a href="/">театр</a></li>
+              <li class="header-nav__item"> <a href="/">мастер-классы/лекции</a></li>
+              <li class="header-nav__item"> <a href="/">фудкорт</a></li>
+              <li class="header-nav__item"> <a href="/">пресс-центр</a></li>
+              <li class="header-nav__item"> <a href="/">контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="map">
+        <div class="map-wrapper">
+          <div class="map-container" id="map"></div><img class="map__logo" src="./images/nicola-logo.svg" alt="Николин день">
+        </div>
+        <div class="map-sidebar"> <a class="map-sidebar__link" href="/">Нижняя сцена</a><a class="map-sidebar__link" href="/">Театральная площадка </a><a class="map-sidebar__link" href="/">Верхняя сцена</a><a class="map-sidebar__link" href="/">Арт-объект «Пастбище»</a><a class="map-sidebar__link" href="/">Арт-объект «Рогатище»</a><a class="map-sidebar__link" href="/">Арт-объект «Скакалище»</a><a class="map-sidebar__link" href="/">Шатер детских театров / гексошатер</a><a class="map-sidebar__link active" href="/">Николин шатер</a><a class="map-sidebar__link" href="/">Зоны фудкортов</a><a class="map-sidebar__link" href="/">Стекольная мастерская</a><a class="map-sidebar__link" href="/">Арт-объект «Кораблетечение»</a><a class="map-sidebar__link" href="/">WC туалеты</a><a class="map-sidebar__link" href="/">Точка выдачи шапок-корабликов</a><a class="map-sidebar__link" href="/">Маркет</a><a class="map-sidebar__link" href="/"> Пункт скорой помощи</a><a class="map-sidebar__link" href="/"> Арт-объект «Николин день»</a><a class="map-sidebar__link" href="/"> Арт-объект «Полный улет»</a><a class="map-sidebar__link" href="/"> Тик-ток контейнер</a><a class="map-sidebar__link" href="/"> «Белое шоу»</a><a class="map-sidebar__link" href="/"> Арт-объект «Бумеранг»</a><a class="map-sidebar__link" href="/"> Арт-объект «Морские контейнеры»</a><a class="map-sidebar__link" href="/"> 30. Зона запуска корабликов</a><a class="map-sidebar__link" href="/">Столы с крышей</a><a class="map-sidebar__link" href="/">Николины столы</a><a class="map-sidebar__link" href="/">Зона пикника</a><a class="map-sidebar__link" href="/">Площадка уличных игр</a><a class="map-sidebar__link" href="/">Цирковая площадь</a><a class="map-sidebar__link" href="/">Зона запуска воздушных змеев</a></div>
+      </section>
+    </main>
+    <script src="js/main.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+    <script src="js/map.js"></script>
+    <footer class="footer"> 
+      <div class="container">
+        <p class="footer-copyrights">© 2021 НИКОЛИН ДЕНЬ Все права защищены</p>
+      </div>
+    </footer>
+  </body>
+</html>
