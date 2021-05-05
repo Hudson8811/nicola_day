@@ -90,5 +90,13 @@ document.addEventListener('DOMContentLoaded', function () {
 	mapBtn.addEventListener('click', () => {
 		sidebar.classList.toggle('active');
 		document.body.style.overflow = sidebar.classList.contains('active') ? "hidden" : "";
+
+		mapBtn.textContent = sidebar.classList.contains('active') ? "Вернуться на карту" : "Список площадок"
 	});
+
+	map.addControl(new mapboxgl.NavigationControl(), 'top-right');	
+
+	const footer = document.querySelector('footer');
+
+	footer.remove();
 });

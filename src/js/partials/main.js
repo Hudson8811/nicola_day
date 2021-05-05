@@ -1,16 +1,4 @@
 $(document).ready(function () {
-   // $("input[name='phone']").mask(" +7 (999) 999-99-99");
-   const videoControl = $('#play');
-
-   videoControl.on('click', function () {
-      const videoWrapper = $('#video-link');
-      const URL = videoWrapper.data('video-link');
-      const script = `<iframe src="${URL}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-
-      videoWrapper.append(script);
-      videoWrapper.addClass('active');
-   });
-
    if ($('.press__block')) {
       $('.press__block').masonry({
          itemSelector: '.press-item',
@@ -18,6 +6,48 @@ $(document).ready(function () {
          gutter: '.press-sizer',
          horizontalOrder: true
        });
+   }
+
+   const scheduleHeader = document.getElementById('scheduleHeader');
+   const compensator = document.querySelector('.schedule__block-mt');
+   const scrollBlock = document.querySelector('.schedule__scroll-block');
+
+   console.dir()
+
+   if (scheduleHeader) {
+      const toggleScroll = () => {
+         const scheduleHeaderClientRect = scheduleHeader.getBoundingClientRect();
+
+         window.addEventListener('scroll', () => {
+            if (scrollY >= scheduleHeaderClientRect.top) {
+               scheduleHeader.classList.add('schedule__block-fixed');
+               scrollBlock.classList.add('active');
+               compensator.style.marginTop = 64 + 'px';
+            } else if (scrollY < scheduleHeaderClientRect.top && scheduleHeader.classList.contains('schedule__block-fixed')) {
+               scheduleHeader.classList.remove('schedule__block-fixed');
+               scrollBlock.classList.remove('active');
+               compensator.style.marginTop = 0;
+            }
+         });
+
+         scrollBlock.addEventListener('scroll', event => {
+            const target = event.target;
+            if (target.scrollLeft > 0) {
+               scheduleHeader.scrollLeft = target.scrollLeft;
+            } else {
+               scheduleHeader.scrollLeft = 0;
+            }
+         });
+      }
+
+      const checkWidth = () => {
+         const media = window.matchMedia("(max-width: 1250px)");
+         if (media.matches) {
+            toggleScroll();
+         }
+      };
+   
+      checkWidth();
    }
 });
 

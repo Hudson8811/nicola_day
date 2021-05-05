@@ -10,9 +10,13 @@
 
 	&-container {
 		width: 100%;
-		height: calc(100vh - 160px);
+		height: calc(100vh - 120px);
 
 		@include tablet {
+			height: calc(100vh - 165px);
+		}
+
+		@include mobile {
 			height: 100vh;
 		}
 	}
@@ -32,9 +36,22 @@
 		line-height: 19px;
 		text-transform: capitalize;
 		color: #000000;
-		overflow-y: auto;
-		height: calc(100vh - 160px);
+		height: calc(100vh - 120px);
 		background-color: #fff;
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			overflow-y: scroll;
+			scrollbar-width: none;
+
+			&::-webkit-scrollbar {
+				-webkit-appearance: none;
+				width: 0;
+				height: 0;
+			}
+		}
 
 		@include tablet {
 			position: fixed;
@@ -44,7 +61,7 @@
 			height: calc(100vh - 225px);
 
 			&.active {
-				top: 165px;
+				top: 155px;
 
 				@include tablet {
 					top: 142px;

@@ -31,29 +31,29 @@ mixin scheduleItem($time="", $text="", $linkText="", $href="/")
 	.schedule-item-wrap 
 		.schedule-item-time
 			=$time
-		.schedule-item-text 
+		a.schedule-item-text(href=$href)
 			=$text
 		if($linkText!="")
 			a.schedule-item-link(href=$href)
 				=$linkText
 mixin infoItem($title="", $text="", $span="", $border="", $href="/")
 	if($border=="")
-		.info-item-wrap.info-item-wrap--gradient
-			.info-item-title
+		a.info-item-wrap.info-item-wrap--gradient(href=$href)
+			span.info-item-title
 				=$title
-			.info-item-text
+			span.info-item-text
 				=$text
-			a.info-item-link(href=$href)
+			span.info-item-link
 				img(src="images/arrow-red.svg", alt="-->")
 	else
-		.info-item-wrap.info-item-wrap--red
-			.info-item-title.info-item-title--black
+		a.info-item-wrap.info-item-wrap--red(href=$href)
+			span.info-item-title.info-item-title--black
 				=$title
-			.info-item-text
+			span.info-item-text
 				=$span
-				p 
+				span
 					=$text
-			a.info-item-link(href=$href)
+			span.info-item-link
 				img(src="images/arrow-red.svg", alt="-->")
 mixin pressItem($class="", $date="", $title="", $text="", $img="", $alt="")
 	if($img!="")

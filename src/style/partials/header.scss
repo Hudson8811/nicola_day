@@ -113,6 +113,9 @@
       align-items: center;
       justify-content: space-between;
       max-width: 1013px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
 
       @include tablet {
         flex-direction: column;

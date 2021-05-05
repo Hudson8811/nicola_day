@@ -22,7 +22,6 @@ h6,
 a,
 span {
 	outline: none;
-	font-size: inherit;
 	background: transparent;
 }
 
@@ -128,9 +127,9 @@ html {
 }
 
 ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
+	list-style: inside;
+	// padding: 0;
+	// margin: 0;
 }
 
 .title {
