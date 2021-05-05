@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	container: 'map',
 	style: 'mapbox://styles/ivanovanton/cko8de0830l8117p28w7r65rp',
 	center: [37.673, 55.6686],
-	zoom: 15.5
+	zoom: 15.5,
+	scrollZoom: false
 	});
 
 	const getFeatures = () => {
@@ -82,6 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		  .setHTML('<h3>' + feature.properties.title + '</h3>')
 		  .addTo(map);
 	});
+
 
 	const mapBtn = document.getElementById('mapBtn');
 

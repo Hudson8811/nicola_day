@@ -41,17 +41,32 @@
 			right: 0;
 			top: 100vh;
 			transition: 0.4s;
-			height: calc(100vh - 60px);
+			height: calc(100vh - 225px);
 
 			&.active {
-				top: 0;
+				top: 165px;
+
+				@include tablet {
+					top: 142px;
+					height: calc(100vh - 209px);
+				}
+
+				@include mobile {
+					top: 0;
+					height: calc(100% - 56px);
+					padding-top: 15px;
+				}
 			}
 		}
 
+		
+
 		&__button {
+			font-family: $mainFontBold;
 			display: none;
 			position: relative;
 			color: #fff;
+			cursor: pointer;
 			
 
 			@include tablet {
@@ -99,4 +114,8 @@
 			}
 		}
 	}
+}
+
+.mapboxgl-map {
+	z-index: 0;
 }
