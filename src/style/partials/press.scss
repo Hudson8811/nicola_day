@@ -20,6 +20,9 @@
 		}
 
 		&__content {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
 			margin-top: 7px;
 			border-top: 10px solid #fff;
 			border-image: linear-gradient(90.04deg, #FF0023 -1.35%, #F0C314 105.4%) 30;
@@ -36,6 +39,11 @@
 			line-height: 28px;
 			text-transform: uppercase;
 			color: $textRed;
+
+			@include mobile {
+				font-size: 22px;
+				line-height: 24px;
+			}
 		}
 
 		&__text {
