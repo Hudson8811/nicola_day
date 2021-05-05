@@ -84,20 +84,25 @@
     @include tablet {
       position: fixed;
       right: -200vw;
-      top: 95px;
-      height: calc(100vh - 95px);
+      top: 0;
+      height: 100vh;
       width: 100%;
       max-width: 375px;
-      padding: 39px 0;
+      padding: 134px 0 70px;
       background: linear-gradient(165.26deg, #ff0023 0%, #f0c314 101.09%);
       border-bottom: none;
       transition: 0.3s;
-      z-index: 9999;
+      z-index: 999;
+      overflow: auto;
     }
 
     &.active {
       @include tablet {
         right: 0;
+      }
+
+      @include mobile {
+        max-width: 100vw;
       }
     }
   }
@@ -193,7 +198,7 @@
   width: 36px;
   height: 24px;
   cursor: pointer;
-  transition-duration: 0.2s;
+  transition: 0.2s;
 
   @include tablet {
     display: block;
@@ -227,15 +232,19 @@
   }
 
   &--active {
+    z-index: 1000;
     span {
       height: 0;
+      background-color: #fff;
 
       &::before {
         transform: rotate(45deg);
+        background-color: #fff;
       }
 
       &::after {
         transform: rotate(-45deg);
+        background-color: #fff;
       }
     }
   }
