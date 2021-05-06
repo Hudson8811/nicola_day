@@ -38,6 +38,15 @@ $(document).ready(function () {
                scheduleHeader.scrollLeft = 0;
             }
          });
+
+         scheduleHeader.addEventListener('scroll', event => {
+            const target = event.target;
+            if (target.scrollLeft > 0) {
+               scrollBlock.scrollLeft = target.scrollLeft;
+            } else {
+               scrollBlock.scrollLeft = 0;
+            }
+         });
       }
 
       const checkWidth = () => {
