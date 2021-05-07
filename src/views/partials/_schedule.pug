@@ -1,12 +1,7 @@
 section.schedule
 	.container.schedule__container
 		h1.title.title--big.schedule__title Расписание
-		h2.subtitle.subtitle--big.schedule__subtitle 21 мая
-		.schedule__block 
-			.row.schedule__row.schedule__row--small
-				.column.schedule__column
-					+scheduleItem("19:00 – 23:00", "Творческий киновечер и показ лучших фильмов Ежегодного благотворительного вечера ACTION!")
-					+scheduleItem("19:00 – 23:00", "Благотворительный вечер ACTION! Показ лучших фильмов", "Главная сцена")
+		
 		.schedule__scroll-block#scrollBlock
 			.schedule__block#scheduleHeader
 				.schedule__header
@@ -18,6 +13,12 @@ section.schedule
 						h3 ТЕАТР
 					.schedule__column 
 						h3 МАСТЕР-КЛАССЫ /ЛЕКЦИИ
+			.schedule__block.schedule__block-mt
+				h2.subtitle.subtitle--big.schedule__subtitle 21 мая
+				.row.schedule__row.schedule__row--small
+					.column.schedule__column
+						+scheduleItem("19:00 – 23:00", "Творческий киновечер и показ лучших фильмов Ежегодного благотворительного вечера ACTION!")
+						+scheduleItem("19:00 – 23:00", "Благотворительный вечер ACTION! Показ лучших фильмов", "Главная сцена")
 			.schedule__block.schedule__block-mt
 				h2.subtitle.subtitle--big.schedule__subtitle.schedule__subtitle--second 22 мая
 				h4.schedule__row-title мероприятия на весь день
@@ -183,7 +184,6 @@ section.schedule
 					.column.schedule__column.schedule__column--line
 					.column.schedule__column.schedule__column--line
 					.column.schedule__column.schedule__column--line
-						+scheduleItem("22:00 – 22:10", "", "Фейерверк")
 			.schedule__block.schedule__block-mt
 				h2.subtitle.subtitle--big.schedule__subtitle.schedule__subtitle--second 23 мая
 				h4.schedule__row-title мероприятия на весь день
@@ -314,7 +314,7 @@ section.schedule
 			.schedule__block.schedule__block--last
 				.row.schedule__row.schedule__row--line
 					.column.schedule__column.schedule__column--line
-					.column.schedule__column.schedule__column--line
-					.column.schedule__column.schedule__column--line
-					.column.schedule__column.schedule__column--line
 						+scheduleItem("22:00 – 22:10", "", "Фейерверк")
+					.column.schedule__column.schedule__column--line
+					.column.schedule__column.schedule__column--line
+					.column.schedule__column.schedule__column--line
