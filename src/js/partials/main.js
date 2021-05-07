@@ -12,8 +12,6 @@ $(document).ready(function () {
    const compensator = document.querySelector('.schedule__block-mt');
    const scrollBlock = document.querySelector('.schedule__scroll-block');
 
-   console.dir()
-
    if (scheduleHeader) {
       const toggleScroll = () => {
          const scheduleHeaderClientRect = scheduleHeader.getBoundingClientRect();
@@ -39,13 +37,8 @@ $(document).ready(function () {
             }
          });
 
-         scheduleHeader.addEventListener('scroll', event => {
-            const target = event.target;
-            if (target.scrollLeft > 0) {
-               scrollBlock.scrollLeft = target.scrollLeft;
-            } else {
-               scrollBlock.scrollLeft = 0;
-            }
+         scheduleHeader.addEventListener('scroll', () => {
+            scheduleHeader.scrollLeft = scrollBlock.scrollLeft;
          });
       }
 

@@ -50,12 +50,7 @@
 	}
 
 	&__subtitle {
-		margin-top: 22px;
-
-		&--second {
-			margin-top: 44px;
-		}
-
+		margin-top: 4px;
 	}
 
 	&-item {
@@ -99,12 +94,12 @@
 	&__row {
 
 		&--line {
-			margin-top: 10px;
+			margin-top: 38px;
 			padding-bottom: 29px;
 		}
 
 		&-title {
-			margin-top: -12px;
+			margin-top: 18px;
 			font-family: $mainFontBold;
 			font-size: 14px;
 			line-height: 16px;
@@ -117,7 +112,8 @@
 
 	&__header {
 		display: flex;
-		padding-bottom: 26px;
+		padding-bottom: 6px;
+		margin-top: 27px;
 
 		.schedule__column {
 			h3 {
