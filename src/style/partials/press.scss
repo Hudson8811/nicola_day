@@ -55,7 +55,12 @@
 			color: $textRed;
 			margin-top: 18px;
 
+			&:visited {
+				color: $textRed;
+			}
+
 			&:hover {
+				color: $textRed;
 				text-decoration: underline;
 			}
 		}

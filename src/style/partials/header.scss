@@ -129,6 +129,14 @@
       line-height: 19px;
       text-transform: capitalize;
       white-space: nowrap;
+      
+      a {
+        color: #000000;
+
+        @include tablet {
+          color: #fff;
+        }
+      }
 
       @media (min-width: 1000px) {
         &:hover {
@@ -160,10 +168,12 @@
       }
 
       &--red {
-        color: $textRed;
-
-        @include tablet {
-          color: #ffffff;
+        a {
+          color: $textRed;
+  
+          @include tablet {
+            color: #ffffff;
+          }
         }
       }
 
@@ -256,5 +266,17 @@
         background-color: #fff;
       }
     }
+  }
+}
+
+.current-menu-item {
+  a {
+    font-family: $mainFontBold;
+  }
+
+  @include tablet {
+    background-image: url("./../images/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: -8px center;
   }
 }

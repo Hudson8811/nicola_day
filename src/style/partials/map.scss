@@ -25,6 +25,10 @@
 		position: absolute;
 		top: 50px;
 		left: 50px;
+
+		@include mobile {
+			display: none;
+		}
 	}
 
 	&-sidebar {
@@ -135,4 +139,9 @@
 
 .mapboxgl-map {
 	z-index: 0;
+}
+
+.mapboxgl-ctrl-top-right {
+	top: 50% !important;
+	transform: translateY(-50%);
 }
