@@ -97,14 +97,16 @@ document.addEventListener('DOMContentLoaded', function () {
 		map.addControl(new mapboxgl.NavigationControl(), 'top-right');
 
 		var features = map.queryRenderedFeatures(e.point, {
-			layers: ['nicola']
+			layers: ['scenes', 'food-zone', 'tents', 'services', 'events', 'art-objects']
 		  });
 		
 		  if (!features.length) {
 			return;
 		  }
 
-		featuresArr = features;
+		  featuresArr = features;
+		  featuresArr = featuresArr.reverse();
+
 		createSidebarItems(features);
 
 		const itemsList = document.querySelector('.map-sidebar>ul');
@@ -118,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	map.on('click', function(e) {
 		var features = map.queryRenderedFeatures(e.point, {
-		  layers: ['nicola']
+			layers: ['scenes', 'food-zone', 'tents', 'services', 'events', 'art-objects']
 		});
 	  
 		if (!features.length) {

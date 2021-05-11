@@ -1,5 +1,5 @@
 .header {
-  width: 100vw;
+  width: 100%;
   z-index: 9999;
 
   &-top {
@@ -199,7 +199,6 @@
     background-color: #fff;
     z-index: 101;
     width: 100%;
-    transition: 0.4s;
 
     &__container {
       display: flex;
@@ -218,6 +217,9 @@
 
     .container {
       @include tablet {
+        max-width: calc(100vw - 60px);
+      }
+      @include mobile {
         max-width: calc(100vw - 30px);
       }
     }

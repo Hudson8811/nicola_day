@@ -71,15 +71,16 @@
 			padding-left: 15px;
 
 			&--red {
-				margin-top: 5px;
 				border-left: 6px solid $textRed;
 				
 				a {
 					text-transform: uppercase;
+					color: $textRed;
 				}
 
 				p {
 					text-transform: uppercase;
+					color: $textRed;
 				}
 			}
 		}
@@ -115,12 +116,6 @@
 			&:visited {
 				color: $textOrange;
 			}
-
-			@media (min-width: 1000px) {
-				&:hover {
-					text-decoration: underline;
-				}
-			}
 		}
 	}
 
@@ -137,6 +132,10 @@
 
 		&--headless {
 			margin-top: 68px;
+		}
+
+		&--small {
+			margin-top: 28px;
 		}
 
 		&-title {
@@ -224,6 +223,15 @@
 			@media (max-width: 1230px) {
 				overflow: auto;
 			}
+		}
+	}
+}
+
+a.schedule-item-link {
+
+	@media (min-width: 1000px) {
+		&:hover {
+			text-decoration: underline;
 		}
 	}
 }

@@ -50,6 +50,7 @@ $(document).ready(function () {
 
    const scheduleHeader = document.getElementById('scheduleHeader');
    const compensator = document.querySelector('.schedule__block-mt');
+   const compensatorTitle = document.querySelector('.schedule__subtitle--first');
    const scrollBlock = document.querySelector('.schedule__scroll-block');
    const headerMobile = document.querySelector('.header-mobile');
    const main = document.querySelector('main');
@@ -65,10 +66,12 @@ $(document).ready(function () {
                   scheduleHeader.classList.add('schedule__block-fixed');
                   scrollBlock.classList.add('active');
                   compensator.style.marginTop = 43 + 'px';
+                  compensatorTitle.style.marginTop = 63 + 'px';
                } else if (scrollY < scheduleHeaderClientRect.top && scheduleHeader.classList.contains('schedule__block-fixed')) {
                   scheduleHeader.classList.remove('schedule__block-fixed');
                   scrollBlock.classList.remove('active');
                   compensator.style.marginTop = 0;
+                  compensatorTitle.style.marginTop = 20 + 'px';
                }
             }
 
@@ -80,10 +83,12 @@ $(document).ready(function () {
                   scheduleHeader.classList.add('schedule__block-fixed');
                   scrollBlock.classList.add('active');
                   compensator.style.marginTop = 43 + 'px';
+                  compensatorTitle.style.marginTop = 63 + 'px';
                } else if (scrollY < scheduleHeaderClientRect.top && scheduleHeader.classList.contains('schedule__block-fixed')) {
                   scheduleHeader.classList.remove('schedule__block-fixed');
                   scrollBlock.classList.remove('active');
                   compensator.style.marginTop = 0;
+                  compensatorTitle.style.marginTop = 20 + 'px';
                }
             } else {
                header.style.position = scrollY > 0 ? 'fixed' : 'static';
@@ -118,7 +123,32 @@ $(document).ready(function () {
       };
    
       checkWidth();
+
+   } else {
+      const fixingHead = (media) => {
+         window.addEventListener('scroll', () => {
+            if (media.matches) {
+               headerMobile.style.position = scrollY > 0 ? 'fixed' : 'static';
+               header.style.paddingTop = scrollY > 0 ? '65px' : '0';
+            } else {
+               header.style.position = scrollY > 0 ? 'fixed' : 'static';
+               main.style.paddingTop = scrollY > 0 ? '131px' : '0';
+            }
+         });
+      }
+
+      const checkWidth = () => {
+         const mediaTablet = window.matchMedia("(max-width: 999px)");
+
+         fixingHead(mediaTablet);
+
+         mediaTablet.addEventListener('change', fixingHead);
+      };
+   
+      checkWidth();
    }
+
+   
    
 
 });
