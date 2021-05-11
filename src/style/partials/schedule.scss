@@ -150,6 +150,34 @@
 			border-top: 1px solid #c4c4c4;
 		}
 
+		&:last-child {
+
+			@media (max-width: 1230px) {
+				min-width: calc(100vw - 60px);
+			}
+
+			@media (max-width: 550px) {
+				min-width: calc(100vw - 30px);
+			}
+			@media (max-width: 329px) {
+				min-width: none;
+				max-width: 290px;
+			}
+
+
+
+			h3 {
+				@media (max-width: 1230px) {
+					min-width: 100vw;
+				}
+				@media (max-width: 329px) {
+					min-width: none;
+					max-width: 290px;
+				}
+				
+			}
+		}
+
 		h3 {
 			font-family: $mainFontBold;
 			font-size: 18px;
@@ -171,22 +199,6 @@
 
 			@media (max-width: 1230px) {
 				overflow: auto;
-				
-				&.active {
-					&::after {
-						content: '';
-						display: block;
-						position: fixed;
-						z-index: 999;
-						right: 0;
-						top: 0px;
-						height: calc(100%);
-						width: 150px;
-						background: linear-gradient(90deg, rgba(255,255,254,0) 0%, rgba(255,255,255,1) 80%);
-						pointer-events: none;
-					}
-				}
-
 			}
 		}
 	}

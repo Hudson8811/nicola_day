@@ -20,7 +20,7 @@ $(document).ready(function () {
             if (scrollY >= scheduleHeaderClientRect.top) {
                scheduleHeader.classList.add('schedule__block-fixed');
                scrollBlock.classList.add('active');
-               compensator.style.marginTop = 64 + 'px';
+               compensator.style.marginTop = 43 + 'px';
             } else if (scrollY < scheduleHeaderClientRect.top && scheduleHeader.classList.contains('schedule__block-fixed')) {
                scheduleHeader.classList.remove('schedule__block-fixed');
                scrollBlock.classList.remove('active');

@@ -88,7 +88,8 @@
 				}
 	
 				min-width: none;
-				max-width: 300px;
+				max-width: 100%;
+				min-height: calc(100vw / 1.23);
 				width: 100%;
 				margin-right: 0;
 			}
