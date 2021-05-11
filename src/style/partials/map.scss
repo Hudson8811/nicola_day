@@ -13,11 +13,7 @@
 		height: calc(100vh - 120px);
 
 		@include tablet {
-			height: calc(100vh - 165px);
-		}
-
-		@include mobile {
-			height: 100vh;
+			height: calc(100vh - 161px);
 		}
 	}
 
@@ -62,25 +58,16 @@
 			right: 0;
 			top: 100vh;
 			transition: 0.4s;
-			height: calc(100vh - 225px);
+			height: calc(100vh - 161px);
 
 			&.active {
-				top: 155px;
-
-				@include tablet {
-					top: 142px;
-					height: calc(100vh - 209px);
-				}
+				top: 95px;
 
 				@include mobile {
-					top: 0;
-					height: calc(100% - 56px);
 					padding-top: 15px;
 				}
 			}
 		}
-
-		
 
 		&__button {
 			font-family: $mainFontBold;

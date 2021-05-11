@@ -149,8 +149,6 @@
 
       @include tablet {
         width: 100%;
-        font-family: $mainFontBold;
-        font-weight: bold;
         font-size: 22px;
         line-height: 26px;
         text-transform: uppercase;
@@ -172,6 +170,7 @@
   
           @include tablet {
             color: #ffffff;
+            font-family: $mainFontBold;
           }
         }
       }

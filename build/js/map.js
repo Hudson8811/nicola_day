@@ -5,10 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	let winWidth = window.innerWidth;
 	let featuresArr = '';
 
-	const headerTop = document.querySelector('.header-top');
-
-	headerTop.remove();
-
 	var map = new mapboxgl.Map({
 		container: 'map',
 		style: 'mapbox://styles/ivanovanton/cko8de0830l8117p28w7r65rp',
