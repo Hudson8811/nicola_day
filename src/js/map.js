@@ -78,6 +78,11 @@ document.addEventListener('DOMContentLoaded', function () {
 			removePopup();
 
 			const targetPoints = featuresArr.filter(feature => feature.properties.id == target.id);
+
+			map.flyTo({
+				center: targetPoints[0].geometry.coordinates,
+				zoom: 15
+				});
 			
 			targetPoints.forEach(point => {
 				createPopup(point);
